@@ -3,7 +3,9 @@ var DATA_SHEET = {
     sheet: SpreadsheetApp.getActiveSpreadsheet().getSheetByName('Data'),
     apiKeyCell: 'B2',
     trafficLightDraftIdCell: 'B4',
-    hotListAccuracyIdCell: 'B5'
+    trafficLightDraftViewNameCell: 'C4',
+    hotListAccuracyIdCell: 'B5',
+    hotListAccuracyViewNameCell: 'C5'
 };
 
 var TRAFFIC_LIGHT_DRAFT_SHEET = {
