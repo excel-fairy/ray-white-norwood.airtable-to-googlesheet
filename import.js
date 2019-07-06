@@ -1,6 +1,7 @@
 function importTables() {
     var airtableApiKey = DATA_SHEET.sheet.getRange(DATA_SHEET.apiKeyCell).getValue();
     var trafficLightDraftId = DATA_SHEET.sheet.getRange(DATA_SHEET.trafficLightDraftIdCell).getValue();
+    var trafficLightDraftTableName = DATA_SHEET.sheet.getRange(DATA_SHEET.trafficLightDraftTableNameCell).getValue();
     var trafficLightDraftViewName = DATA_SHEET.sheet.getRange(DATA_SHEET.trafficLightDraftViewNameCell).getValue();
 
     // var Airtable = require('airtable');
@@ -15,7 +16,7 @@ function importTables() {
 
 
     var url = 'https://api.airtable.com/v0/'
-        + trafficLightDraftId + '/Database'
+        + trafficLightDraftId + '/' + trafficLightDraftTableName
         + '?maxRecords=10'
         + '&view=' + encodeURIComponent(trafficLightDraftViewName);
     var options = {
